@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà xe Tân TrungTrung - Dịch vụ vận tải & du lịch</title>
+    <link rel="stylesheet" href="../css/Banner.css">
+    <link rel="stylesheet" href="../css/Booking.css">
+    <link rel="stylesheet" href="../css/Footer.css">
+    <link rel="stylesheet" href="../css/Global.css">
+    <link rel="stylesheet" href="../css/Header.css">
+    <link rel="stylesheet" href="../css/Price table.css">
+    <link rel="stylesheet" href="../css/Reset.css">
+    <link rel="stylesheet" href="../css/Respontive.css">
+    <link rel="stylesheet" href="../css/Services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Nhà xe TÂN TRUNG</h1>
+                <p>Công ty TNHH Thương Mại Dịch Vụ Vận Tải & Du Lịch TT Travel </p>
+            </div>
+            <div class="hotline">
+                <p>Hotline: <span>0812.203.203</span></p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="container">
+            <h2>Vận tải & Du lịch Tân Trung</h2>
+            <p>Tận Tâm - An Toàn - Chất Lượng</p>
+        </div>
+    </section>
+    
+    <!-- Booking Form -->
+    <div class="container">
+        <div class="booking-form">
+            <h3>ĐẶT VÉ XE / ĐẶT TOUR</h3>
+            
+            
+            <div class="service-options">
+                <div class="service-tab active" onclick="showService('single-seat')">Ghế đơn</div>
+                <div class="service-tab" onclick="showService('whole-car')">Bao xe</div>
+                <div class="service-tab" onclick="showService('express')">Ship hỏa tốc</div>
+                <div class="service-tab" onclick="showService('province')">Đi tỉnh</div>
+            </div>
+            
+            <!-- Ghế đơn -->
+            <div id="single-seat" class="service-content active">
+                <div class="route-info">
+                    <h4>Ghế đơn <span class="price-tag">Chỉ từ 150k</span></h4>
+                    <p>Đặt 1 ghế trên các tuyến đường cố định của nhà xe</p>
+                </div>
+                
+                <form>
+                    <select name="route" required>
+                        <option value="">Chọn tuyến đường</option>
+                        <option value="route1">Thanh Sơn - Thanh Thuỷ - Ba Vì - Hà Nội</option>
+                        <option value="route2">Thanh Thuỷ - Việt Trì - Vĩnh Phúc</option>
+                    </select>
+                    
+                    <input type="date" placeholder="Ngày đi" name="date" required>
+                    <input type="time" placeholder="Giờ đi" name="time" required>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <input type="number" placeholder="Số ghế" name="seats" min="1" max="10" value="1" style="flex: 1;">
+                        <select name="seat-type" style="flex: 1;">
+                            <option value="normal">Ghế thường</option>
+                            <option value="priority">Ghế ưu tiên (+20k)</option>
+                        </select>
+                    </div>
+                    
+                    <input type="text" placeholder="Họ tên" name="name" required>
+                    <input type="tel" placeholder="Số điện thoại" name="phone" required>
+                    
+                    <button type="submit">ĐẶT GHẾ - TỪ 150K</button>
+                </form>
+            </div>
+            
+            <!-- Bao xe -->
+            <div id="whole-car" class="service-content">
+                <div class="route-info">
+                    <h4>Bao xe <span class="price-tag">Chỉ từ 500k (1 chiều) | 900k (2 chiều)</span></h4>
+                    <p>Thuê nguyên xe cho nhóm, gia đình hoặc công ty</p>
+                </div>
+                
+                <form>
+                    <select name="car-type" required>
+                        <option value="">Chọn loại xe</option>
+                        <option value="4-seat">Xe 4 chỗ (500k/chiều)</option>
+                        <option value="7-seat">Xe 7 chỗ (700k/chiều)</option>
+                        <option value="16-seat">Xe 16 chỗ (1.2tr/chiều)</option>
+                        <option value="29-seat">Xe 29 chỗ (1.8tr/chiều)</option>
+                    </select>
+                    
+                    <input type="text" placeholder="Điểm đón" name="pickup" required>
+                    <input type="text" placeholder="Điểm đến" name="destination" required>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <input type="date" placeholder="Ngày đi" name="date" style="flex: 1;" required>
+                        <input type="time" placeholder="Giờ đi" name="time" style="flex: 1;" required>
+                    </div>
+                    
+                    <select name="trip-type">
+                        <option value="one-way">Một chiều</option>
+                        <option value="round-trip">Khứ hồi (+400k)</option>
+                    </select>
+                    
+                    <input type="text" placeholder="Họ tên" name="name" required>
+                    <input type="tel" placeholder="Số điện thoại" name="phone" required>
+                    
+                    <button type="submit">ĐẶT XE NGAY</button>
+                </form>
+            </div>
+            
+            <!-- Ship hỏa tốc -->
+            <div id="express" class="service-content">
+                <div class="route-info">
+                    <h4>Ship hỏa tốc <span class="price-tag">Chỉ từ 50k</span></h4>
+                    <p>Dịch vụ vận chuyển hàng hóa nhanh chóng, an toàn</p>
+                </div>
+                
+                <form>
+                    <input type="text" placeholder="Loại hàng hóa" name="item-type" required>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" placeholder="Điểm lấy hàng" name="pickup" style="flex: 1;" required>
+                        <input type="text" placeholder="Điểm giao hàng" name="destination" style="flex: 1;" required>
+                    </div>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <input type="number" placeholder="Khối lượng (kg)" name="weight" min="0.1" step="0.1" style="flex: 1;">
+                        <input type="number" placeholder="Kích thước (m3)" name="size" min="0.01" step="0.01" style="flex: 1;">
+                    </div>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <input type="date" placeholder="Ngày giao" name="date" style="flex: 1;" required>
+                        <input type="time" placeholder="Giờ giao" name="time" style="flex: 1;" required>
+                    </div>
+                    
+                    <input type="text" placeholder="Người gửi" name="sender" required>
+                    <input type="tel" placeholder="Số điện thoại" name="phone" required>
+                    
+                    <button type="submit">YÊU CẦU SHIP</button>
+                </form>
+            </div>
+            
+            <!-- Đi tỉnh -->
+            <div id="province" class="service-content">
+                <div class="route-info">
+                    <h4>Đi tỉnh <span class="price-tag">Chỉ 10k/km</span></h4>
+                    <p>Dịch vụ xe theo yêu cầu đến các tỉnh thành</p>
+                </div>
+                
+                <form>
+                    <input type="text" placeholder="Điểm đón" name="pickup" required>
+                    <input type="text" placeholder="Điểm đến" name="destination" required>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <input type="date" placeholder="Ngày đi" name="date" style="flex: 1;" required>
+                        <input type="time" placeholder="Giờ đi" name="time" style="flex: 1;" required>
+                    </div>
+                    
+                    <select name="car-type" required>
+                        <option value="">Chọn loại xe</option>
+                        <option value="4-seat">Xe 4 chỗ (10k/km)</option>
+                        <option value="7-seat">Xe 7 chỗ (12k/km)</option>
+                        <option value="16-seat">Xe 16 chỗ (15k/km)</option>
+                    </select>
+                    
+                    <input type="number" placeholder="Số người" name="passengers" min="1" required>
+                    
+                    <input type="text" placeholder="Họ tên" name="name" required>
+                    <input type="tel" placeholder="Số điện thoại" name="phone" required>
+                    
+                    <button type="submit">TÍNH CƯỚC PHÍ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Price Table Section -->
+    <div class="container">
+        <div class="price-table">
+            <h2>BẢNG GIÁ VÀ LỘ TRÌNH</h2>
+            <table>
+                <tr>
+                    <th>Tuyến đường</th>
+                    <th>Giá vé</th>
+                    <th>Thời gian</th>
+                </tr>
+                <tr>
+                    <td>Thanh Sơn - Thanh Thuỷ - Ba Vì - Hà Nội</td>
+                    <td>150.000đ</td>
+                    <td>3h30'</td>
+                </tr>
+                <tr>
+                    <td>Thanh Thuỷ - Việt Trì - Vĩnh Phúc</td>
+                    <td>150.000đ</td>
+                    <td>2h45'</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>CÔNG TY TNHH TT TRAVEL</h4>
+                <p>Địa chỉ: Khu phố Thị Trấn Thanh Thủy - Phú Thọ </p>
+                <p>Giấy phép kinh doanh: 0101234567</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>LIÊN HỆ</h4>
+                <p>Hotline: 0812.203.203</p>
+                <p>Email: nhaxetantrung@gmail.com</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/nhaxetantrung"><i class="fab fa-facebook-f"></i></a>
+                    <a href="0812 203 203"><i class="fab fa-zalo"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container copyright">
+            <p>&copy; 2023 Nhà xe Tân Trung. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lấy tất cả các tab và content
+            const tabs = document.querySelectorAll('.service-tab');
+            const contents = document.querySelectorAll('.service-content');
+            
+            // Thêm sự kiện click cho mỗi tab
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    
+                    // Xóa active class từ tất cả các tab và content
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+                    
+                    // Thêm active class cho tab và content được chọn
+                    this.classList.add('active');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+        </script>
+</body>
+</html>
