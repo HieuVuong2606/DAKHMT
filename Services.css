@@ -1,0 +1,28 @@
+.services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    width: 30%;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #1A5D1A;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.service-card h4 {
+    color: #1A5D1A;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,16 @@
+.banner {
+    background-image: linear-gradient(rgba(81, 93, 11, 0.5), rgba(255, 242, 4, 0.5)), url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
